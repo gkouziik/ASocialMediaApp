@@ -9,4 +9,4 @@ With the following extra features added by me:
 * Profile Edits(users can upload information about themselves: email, website, "about me" etc)
 * Edit Posts(users can edit their posts)
 * File uploads(allow users to upload images, and videos, etc)
-*Custom css
+* Custom css
