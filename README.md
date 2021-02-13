@@ -1,5 +1,4 @@
 # ASocialMediaApp
-# SocialMediaApp
 A social media app with MERNG Stack
 The current app is a social media app with MongoDb, React, Express, Node.js, and GraphQL
 The structure of this app is taken from [FreeCodeCamp youtube course](https://www.youtube.com/watch?v=n1mdAPFq2Os&t=3396s&ab_channel=freeCodeCamp.org)
