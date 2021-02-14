@@ -10,3 +10,4 @@ With the following extra features added by me:
 * Edit Posts(users can edit their posts)
 * File uploads(allow users to upload images, and videos, etc)
 * Custom css
+* Test Files
