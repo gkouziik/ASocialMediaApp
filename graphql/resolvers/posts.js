@@ -1,6 +1,7 @@
 const { AuthenticationError, UserInputError } = require('apollo-server');
 const Post = require('../../models/Posts');
 const checkAuth = require('../../utils/check-auth');
+const { NEW_POST } = require('../../utils/constants');
 
 module.exports = {
   Query: {
@@ -35,6 +36,10 @@ module.exports = {
         createdAt: new Date().toISOString(),
       });
       const post = await newPost.save();
+
+      context.pubSub.publish(NEW_POST, {
+        newPost: post,
+      });
 
       return post;
     },
@@ -71,6 +76,11 @@ module.exports = {
         return post;
       }
       throw new UserInputError('Post not found');
+    },
+  },
+  Subscription: {
+    newPost: {
+      subscribe: (_, __, { pubSub }) => pubSub.asyncIterator(NEW_POST),
     },
   },
 };
